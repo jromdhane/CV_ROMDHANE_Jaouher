@@ -1,26 +1,52 @@
-MCA, Groupe de Conseil en Ingénierie et Hautes Technologies compte aujourd’hui 1450 collaborateurs en France et à l’International. Nous accompagnons nos clients depuis 30 ans sur les métiers de l’ingénierie, de l’IT et de la cybersécurité.
+En 2026, Parrot est à la recherche de talents passionné.es pour relever des défis technologiques de pointe.
 
-Chez MCA, nous construisons des carrières, des projets à impact, et une communauté d’ingénieurs passionnés.
+Ensemble, nous créerons des projets innovants, ambitieux, et à la hauteur des enjeux de demain.
 
-Votre Rôle à Nos Côtés
+Vous aimez l'innovation, vous n'avez pas peur des défis ? Venez faire la différence aux côtés des femmes et des hommes de nos équipes !
 
-En tant qu’Ingénieur Software Embarqué MBD, vous utiliserez les outils de modélisation et d’automatisation (MATLAB/Simulink/Stateflow) pour concevoir, générer et tester des logiciels embarqués critiques, tout en réduisant le temps de développement et en améliorant la fiabilité.
+Fondée en 1994 par Henri Seydoux, Parrot est aujourd'hui le leader européen des drones professionnels. Située au cœur de Paris, notre R&D réunit une équipe multiculturelle d'ingénieur(e)s, où chaque voix compte pour réinventer l'avenir des drones.
 
-Vous Interviendrez
+Dans le cadre du développement de nouveaux drones, Parrot recherche un Ingénieur Logiciel Python dédié à l’automatisation des tests sur les firmwares de drones.
 
- Sur la définition et la modélisation des comportements système sous MATLAB/Simulink/Stateflow. 
- Sur le développement et affinerez les modèles fonctionnels en lien avec les exigences système. 
- Afin de générer du code embarqué via Embedded Coder / TargetLink. 
- Sur les tests MIL, SIL, HIL pour valider les modèles et leur intégration. 
- Sur l’analyse des résultats, la correction des anomalies et vous assurerez la traçabilité des exigences. 
- En collaboration avec les équipes systèmes, software et validation pour garantir la conformité produit. 
+Au sein du département « R&D Drone Software », vous serez rattaché au service « Automatisation ».
 
-Les Compétences Clés
+Ce service est en charge du développement et de la maintenance :
 
- Bac +5 (école d’ingénieur ou master en systèmes embarqués, automatique, informatique industrielle, électronique). 
- 2 à 6 ans d’expérience en développement logiciel embarqué par modélisation. 
- Rigueur, autonomie et esprit d’analyse. 
- Goût pour l’innovation et l’optimisation des processus de développement. 
- Autonomie, rigueur, esprit d’analyse, goût pour le travail en équipe. 
- Diplômé(e) d’une école d’ingénieur ou équivalent (Bac+5), avec une appétence pour les environnements techniques et industriels. 
- Anglais Obligatoire. 
+d’une infrastructure permettant de tester automatiquement les firmwares de drone,
+ainsi que du pool de tests s’appuyant sur cette infrastructure.
+
+Ce poste requiert d’être à l’aise dans un environnement technique étendu et d’avoir, ou d’acquérir rapidement, une bonne connaissance de chacun des aspects du drone couverts par les tests, existants et planifiés.
+
+Cette connaissance est essentielle pour concevoir des scénarios de tests pertinents et discriminants.
+
+Vous serez amené à communiquer avec le drone, qu’il soit simulé ou physique, en utilisant les différentes interfaces disponibles (protocoles propriétaires sur IP, MAVLink, HTTP, ADB, etc.), via un framework logiciel déjà en place.
+
+Le tout dans un environnement 100 % Linux.
+
+Vous participerez également à l’analyse des résultats de test et à la remontée des problèmes auprès des équipes concernées.
+
+Vos Missions
+
+Concevoir de nouveaux scénarios de tests discriminants couvrant les nouvelles fonctionnalités,
+Interagir avec les équipes de développement firmware R&D,
+Déployer les tests dans la test farm et s’assurer de leur bon fonctionnement,
+Analyser les résultats en cas de problème détecté,
+Rédiger des rapports de défauts clairs et complets.
+
+Votre Profil
+
+Diplômé d'école d'ingénieur ou équivalent avec une spécialité en informatique
+Doté d'une première expérience de 2 ans en développement logiciel, robotique ou aéronautique
+Vous maîtrisez Python3, Bash et Linux
+Vous avez des connaissances en Git, Jenkins et Docker
+Vous êtes rigoureux, méthodique, autonome et aimez le travail en équipe
+
+Ce Que Nous Proposons
+
+Une intégration au cœur d’une équipe de passionné(e)s.
+Des projets techniques à la hauteur de vos ambitions.
+Des responsabilités pour chacun(e) , l’opportunité pour toutes et tous d’avoir un impact dans votre travail, jeunes diplômés ou profils expérimentés.
+Une ambiance technophile et multiculturelle.
+Une culture d’entreprise sincèrement guidée par les principes d’inclusion, d’équité et de diversité.
+Un cadre de travail unique au coeur de Paris.
+Un cadre social performant et adapté (télétravail hybride notamment).

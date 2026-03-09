@@ -71,20 +71,36 @@ class Adapter:
         text = re.sub(r"(?<!\\)_", r"\_", text)
         
         return text
-    def cleanup_artifacts(self, verbose=False):
+    def cleanup_artifacts(self, verbose=True):
         cleaned = 0
-        for fname in ["cv.aux", "cv.log", "cv.out", "cv.toc", "cv.bbl", "cv.blg", "cv.fls", "cv.fdb_latexmk"]:
+        extensions = [
+            "cv.aux", "cv.log", "cv.out", "cv.toc", "cv.bbl", "cv.blg", 
+            "cv.fls", "cv.fdb_latexmk", "cv.synctex.gz", "cv.run.xml", "cv.bcf"
+        ]
+        
+        files_to_remove = set(extensions)
+        for f in os.listdir("."):
+            if f.endswith("-blx.bib") or f.endswith(".synctex.gz") or f.endswith(".upa"):
+                files_to_remove.add(f)
+
+        for fname in files_to_remove:
             fpath = Path(fname)
             if fpath.exists():
                 try:
+                    if verbose: print(f"    Removing {fname}...", end=" ")
                     fpath.unlink()
                     cleaned += 1
-                except:
+                    if verbose: print("OK")
+                except Exception as e1:
+                    # Retry
                     try:
-                        os.remove(fname)
+                        time.sleep(1)
+                        if fpath.exists():
+                            fpath.unlink()
                         cleaned += 1
-                    except:
-                        pass
+                        if verbose: print("OK (retry)")
+                    except Exception as e2:
+                        if verbose: print(f"Failed: {e2}")
         return cleaned
     def call(self, s, u, t=300):
         try:
@@ -802,6 +818,9 @@ CONSIGNES STRICTES DE FORMAT DE SORTIE :
                         if Path(pdf_path).exists():
                             Path(pdf_path).unlink()
                         shutil.move("cv.pdf", pdf_path)
+                        if Path("cv.pdf").exists():
+                             try: Path("cv.pdf").unlink()
+                             except: pass
                         print(f"  OK: {pdf_path}\n")
                         break
                     except PermissionError:
@@ -822,8 +841,18 @@ CONSIGNES STRICTES DE FORMAT DE SORTIE :
             
             print("STEP 10: Restore files...")
             self.restore()
-            print("  OK\n")
+            print("  OK")
             
+            # Final cleanup attempt in case restoration triggered something or files appeared late
+            # Check if artifacts reappeared
+            if any(Path(f).exists() for f in ["cv.aux", "cv.log", "cv.synctex.gz", "cv.pdf"]):
+                 print("  Performing final cleanup...")
+                 self.cleanup_artifacts(verbose=False)
+                 if Path("cv.pdf").exists():
+                     try: Path("cv.pdf").unlink()
+                     except: pass
+            print("")
+
             print("="*80)
             print(f"MATCHING SCORE: {match_score}%")
             print("="*80 + "\n")
