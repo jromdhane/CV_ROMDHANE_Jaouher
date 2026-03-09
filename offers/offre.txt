@@ -1,0 +1,26 @@
+MCA, Groupe de Conseil en Ingénierie et Hautes Technologies compte aujourd’hui 1450 collaborateurs en France et à l’International. Nous accompagnons nos clients depuis 30 ans sur les métiers de l’ingénierie, de l’IT et de la cybersécurité.
+
+Chez MCA, nous construisons des carrières, des projets à impact, et une communauté d’ingénieurs passionnés.
+
+Votre Rôle à Nos Côtés
+
+En tant qu’Ingénieur Software Embarqué MBD, vous utiliserez les outils de modélisation et d’automatisation (MATLAB/Simulink/Stateflow) pour concevoir, générer et tester des logiciels embarqués critiques, tout en réduisant le temps de développement et en améliorant la fiabilité.
+
+Vous Interviendrez
+
+ Sur la définition et la modélisation des comportements système sous MATLAB/Simulink/Stateflow. 
+ Sur le développement et affinerez les modèles fonctionnels en lien avec les exigences système. 
+ Afin de générer du code embarqué via Embedded Coder / TargetLink. 
+ Sur les tests MIL, SIL, HIL pour valider les modèles et leur intégration. 
+ Sur l’analyse des résultats, la correction des anomalies et vous assurerez la traçabilité des exigences. 
+ En collaboration avec les équipes systèmes, software et validation pour garantir la conformité produit. 
+
+Les Compétences Clés
+
+ Bac +5 (école d’ingénieur ou master en systèmes embarqués, automatique, informatique industrielle, électronique). 
+ 2 à 6 ans d’expérience en développement logiciel embarqué par modélisation. 
+ Rigueur, autonomie et esprit d’analyse. 
+ Goût pour l’innovation et l’optimisation des processus de développement. 
+ Autonomie, rigueur, esprit d’analyse, goût pour le travail en équipe. 
+ Diplômé(e) d’une école d’ingénieur ou équivalent (Bac+5), avec une appétence pour les environnements techniques et industriels. 
+ Anglais Obligatoire. 
