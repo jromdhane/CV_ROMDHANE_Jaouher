@@ -668,19 +668,21 @@ CONSIGNES STRICTES DE FORMAT DE SORTIE :
             {context_keywords}
 
             INSTRUCTIONS :
-            1. UTILISE IMPÉRATIVEMENT LA STRUCTURE SUIVANTE (4-5 phrases) :
-               - Phrase 1 : Titre actuel + Années d'expérience + Expertise principale liée au poste (ex: "Ingénieur R&D Senior (10 ans), expert en...").
-               - Phrase 2 : Spécialisation technique ou sectorielle apportant de la valeur (ex: "Spécialiste en... pour...").
-               - Phrase 3 : Stack technique et méthodologies clés maîtrisées (ex: "Développeur... avec pratiques...").
-               - Phrase 4 : Leadership, Certifications (PMP, Scrum) et Soft Skills (ex: "Certifié PMP, je pilote...").
-            2. Mets en GRAS les compétences clés et mots-clés du poste (ex: \\textbf{{Python}}, \\textbf{{Optimisation}}).
-            3. Adopte un ton direct, professionnel et orienté résultats ("Je", "Mon").
-            4. Intègre NATURELLEMENT les mots-clés prioritaires ci-dessus.
-            5. Limite à 600 caractères maximum.
-            6. Réponds UNIQUEMENT le texte du résumé en français.
+            1. OBJECTIF : Rédiger un profil (Executive Summary) structuré, riche et détaillé (environ 650 caractères), qui justifie l'adéquation au poste.
+            2. INTERDIT ABSOLU :
+               - Formule "je maîtrise X, Y, Z" ou "expert en X, Y, Z".
+               - Répétition de mots (ex: "gestion" deux fois, "système" deux fois).
+               - Majuscules pour les noms communs.
+            3. TRADUCTION OBLIGATOIRE : Traduis TOUS les termes métiers en Français avec des synonymes variés (ex: "Quotation" -> "Elaboration de devis", "Order Management" -> "Suivi des commandes", "Parts Management" -> "Logistique de pièces").
+            4. STRUCTURE IMPOSÉE (3 phrases complètes) :
+               - Phrase 1 (Accroche) : "Fort de 10 ans d'expérience en [Domaine], j'apporte une expertise en [Compétence A] pour optimiser [Objectif du poste]."
+               - Phrase 2 (Technique - DOIT ÊTRE DÉTAILLÉE) : "Mon savoir-faire en [Outils/Produits Spécifiques de l'offre] me permet de [Résultat Concret : réduire les délais, garantir la qualité, etc.]."
+               - Phrase 3 (Méthode/Soft) : "Alliant [Qualité Humaine] et [Méthodologie], je m'implique dans la réussite de vos projets [Type de projet]."
+            5. FORMATAGE : Mets en GRAS les 3-4 mots-clés les plus importants (ex: \\textbf{{Python}}).
+            6. Limite à 650 caractères. Sois précis et technique.
             """
             
-            result = self.call("Tu es un expert en rédaction de CV et en recrutement.", prompt, 600)
+            result = self.call("Tu es un expert en rédaction de CV et en recrutement.", prompt, 750)
             
             if not result:
                 print("    Error: LLM returned no result")
@@ -771,7 +773,7 @@ CONSIGNES STRICTES DE FORMAT DE SORTIE :
             # Passe les mots-clés détaillés à la fonction (keywords est déjà extrait à l'étape 3b)
             optimized_hl = self.optimize_headline(hl_text, job_title, company, key_skills, detailed_keywords=keywords)
             if optimized_hl:
-                print(f"  OK ({len(optimized_hl)} chars)")
+                print(f"  Generated Headline: {optimized_hl}")
                 with open("sections/section_headline.tex", "w", encoding="utf-8") as f:
                     f.write(f"\\par{{\n{optimized_hl}\n}}\n\\newline\n")
             print("")
